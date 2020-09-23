@@ -13,12 +13,14 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
-
-	Paper1=new Paper(100,100);
-
 	engine = Engine.create();
 	world = engine.world;
 
+	Paper1=new Paper(100,100);
+	Dustbin1=new Dustbin(100,400,70,10);
+	ground1=new Ground(200,height,400,20);
+
+	
 	//Create the Bodies Here.
 
 
@@ -32,10 +34,9 @@ function draw() {
   background(0);
 
   Paper1.display();
+  Dustbin1.display();
+  ground1.display();
 
   drawSprites();
  
 }
-
-
-
